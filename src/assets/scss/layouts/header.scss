@@ -1,0 +1,69 @@
+.header{
+	padding: 20px 0;
+
+	&__content{
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+
+	&__logo{margin-right: 15px;}
+
+	&__contacts{
+		display: flex;
+		flex-direction: column;
+		align-items: flex-end;
+		margin-left: 15px;
+	}
+
+	&__callback{
+		display: inline-block;
+		font-size: 1.6rem;
+		font-weight: 500;
+		margin-top: 8px;
+	}
+}
+
+.top-menu{
+	&__list,
+	&__item{
+		margin: 0;
+		padding: 0;
+		list-style: none;
+	}
+
+	&__list{
+		display: flex;
+		align-items: center;
+	}
+
+	&__item{margin: 0 23px;}
+
+	&__item,
+	&__link{
+		@include font(normal, 500, 1.6rem, 1.2, $color-blue);
+		transition: all 0.2s ease 0s;
+	}
+
+	&__link:hover{
+		color: $color-purple;
+	}
+}
+
+.contact-phone{
+	display: inline-flex;
+	align-items: center;
+	text-decoration: none;
+
+	&__icon{
+		flex-shrink: 0;
+		margin-right: 18px;
+		
+		.icon{fill: $color-red;}
+	}
+
+	&__text{
+		font-family: $font-bitter;
+		@include font(normal, 900, 2.2rem, 1.2, $color-text);
+	}
+}

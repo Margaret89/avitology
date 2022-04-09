@@ -4,16 +4,6 @@ block variables
 	- var title = 'Типографика';
 	- var h1 = 'Типографика';
 
-
-block breadcrumb
-	-
-		var breadcrumbs=[
-			{href:'/',name:'Главная'},
-			{href:'#',name:'Типографика'},
-		];
-
-	+breadcrumbs(breadcrumbs)
-
 block content
 	section.container
 		.row
@@ -65,5 +55,5 @@ block content
 				.type-icon
 					.type-icon__item
 						.type-icon__img
-							+svg('ic-twitter','ic-twitter', '17', '14')
-						.type-icon__name ic-twitter
+							+svg('ic-call','ic-call', '20', '20')
+						.type-icon__name ic-call

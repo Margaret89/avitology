@@ -2,8 +2,16 @@ html,
 body{
 	background: #fff;
 	font-family: $font-site;
-	@include font(normal, normal, 16px, 1.375, $color-text);
+	@include font(normal, normal, 10px, 1.375, $color-text);
 	box-sizing:border-box;
+}
+
+body{font-size: 1.8rem;}
+
+body.no-scroll{
+	width: 100vw;
+	height: 100vh;
+	overflow: hidden;
 }
 
 *,
@@ -106,14 +114,73 @@ button.btn{
 	padding: 5px 40px;
 	cursor: pointer;
 	transition: all 0.2s ease 0s;
+	overflow: hidden;
+	position: relative;
+	z-index: 1;
+}
+
+
+.btn,
+button.btn{
+	transition: background 0.2s ease 0.1s;
+}
+
+input[type="submit"].btn{transition: background 0.2s ease 0s;}
+
+.btn::after{
+	content: "";
+	height: 0%;
+	width: 150%;
+	border: 4px solid #ffffff;
+	opacity: 0;
+	transform: translateX(-50%) translateY(-50%) rotate(-180deg);
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transition: all 1s ease 0s;
 }
 
 .btn:hover,
 input[type="submit"].btn:hover,
 button.btn:hover{
 	background: $color-purple;
-	color: #fff;
+	color:#fff;
 }
+
+.btn:hover::after{
+	height: 400%;
+	opacity: 1;
+	color: #FFF;
+}
+
+// .btn_border,
+// input[type="submit"].btn_border,
+// button.btn_border{
+// 	border: 1px solid #b1b1b1;
+// 	background: transparent;
+// }
+
+// .btn_border,
+// button.btn_border{
+// 	transition: border 0.2s ease 0.1s;
+// }
+
+// input[type="submit"].btn_border{transition: border 0.2s ease 0s;}
+
+// .btn_border:hover,
+// input[type="submit"].btn_border:hover,
+// button.btn_border:hover{
+// 	background: transparent;
+// 	border-color: #686868;
+// 	text-decoration: underline;
+// 	text-decoration-color: #686868;
+// }
+
+// .btn{
+// 	.icon{fill: #fff;}
+// }
+
+
 
 .code{
 	background-color: #f7f7f7;
