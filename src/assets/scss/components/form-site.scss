@@ -1,0 +1,215 @@
+/*-------------- form-site -----------------*/
+.form-site-wrap{
+	margin: 100px 0;
+
+	.st-width{
+		background-image: url(../img/waves-left.png);
+		background-repeat: no-repeat;
+		background-position: bottom left;
+	}
+
+	&__img{
+		display: flex;
+		align-items: flex-end;
+		height: 100%;
+		margin-bottom: -50px;
+	}
+
+	.form-site{padding: 100px 0;}
+}
+
+.form-site{
+	&__title{
+		@include font(none, bold, 4.6rem, 1.3, none);
+		margin-bottom: 15px;
+	}
+
+	&__text{
+		font-size: 1.8rem;
+		line-height: 1.6;
+		margin-bottom: 15px;
+	}
+
+	&__content{
+		display: flex;
+		flex-wrap: wrap;
+		margin-left: -10px;
+		margin-right: -10px;
+	}
+	
+	&__item{
+		width: calc(100% - 20px);
+		margin: 0 10px 20px;
+	}
+
+	&__item.error{position: relative;}
+	&__item_half{width: calc(50% - 20px);}
+
+	input[type="text"],
+	input[type="email"],
+	input[type="number"],
+	input[type="password"],
+	textarea{
+		display: inline-block;
+		height: 6.8rem;
+		width: 100%;
+		background: #fff;
+		font-family: $font-site;
+		@include font(none, 500, 1.6rem, 6.8rem, $color-text);
+		padding: 0 40px;
+		border-radius: 3.4rem;
+		border: none;
+		outline: none;
+		margin: 0;
+		box-shadow: none;
+		transition: background 0.2s ease 0s;
+	}
+
+	textarea{
+		height: 10rem;
+		line-height: 1.6;
+		padding-top: 1rem;
+		padding-bottom: 1rem;
+	}
+
+	input[type="text"]:focus,
+	input[type="number"]:focus,
+	input[type="email"]:focus,
+	input[type="password"]:focus,
+	textarea:focus{
+		background: #fefefe;
+		border: none;
+		outline: none;
+		box-shadow: none;
+	}
+
+	&__item.error{
+		input[type="text"],
+		input[type="number"],
+		input[type="email"],
+		input[type="password"],
+		textarea{
+			background: #d898a8;
+			opacity: 1;
+		}
+
+		input[type="text"]::placeholder,
+		input[type="number"]::placeholder,
+		input[type="email"]::placeholder,
+		input[type="password"]::placeholder,
+		textarea::placeholder{
+			color: $color-red;
+		}
+	}
+
+	
+	.form-site-msg-error{
+		@include font(none, none, 1.2rem, 1.2, $color-red);
+		margin-top: 5px;
+		position: absolute;
+		top: 100%;
+		left: 0;
+	}
+
+	&__btn{margin-top: 10px;}
+
+	// &__error{
+	// 	@include font(none, none, 1.6rem, 1.2, $color-red);
+	// 	margin-bottom: 10px;
+	// }
+}
+
+.success-alert{
+	max-width: 430px;
+	text-align: center;
+
+	&__title{
+		@include font(none, 500, 3rem, 1.2, $color-text);
+	}
+
+	&__text{margin-top: 2rem;}
+}
+
+.popup-form{
+	width: 516px;
+	max-width: calc(100% + 72px);
+	padding: 75px 80px;
+	background: $color-purple;
+	color: #fff;
+	border-radius: 26px;
+	margin: -36px;
+
+	&~.carousel__button.is-close{
+		top: 30px;
+		right: 30px;
+		opacity: 0.4;
+		transition: opacity 0.2s ease 0s;
+	}
+
+	&~.carousel__button.is-close:hover{opacity: 1;}
+
+	h1, .h1, h2, .h2, h3, .h3{
+		text-align: center;
+	}
+	
+	.form-site{
+		.btn{width: 100%;}
+
+		input[type="text"],
+		input[type="email"],
+		input[type="number"],
+		input[type="password"],
+		textarea{
+			background: #8356CB;
+			color: #fff;
+		}
+
+		input[type="text"]:focus,
+		input[type="number"]:focus,
+		input[type="email"]:focus,
+		input[type="password"]:focus,
+		textarea:focus{
+			background: #64409D;
+		}
+	}
+}
+
+// .main-user-consent-request-popup{z-index: 100010;}
+
+// @media (max-width: 767px) {
+// 	.popup-form{
+// 		.form-site{
+// 			&__btn{text-align: center;}
+
+// 		}
+// 	}
+
+// 	.form-site{
+// 		&__content{
+// 			margin-left: 0;
+// 			margin-right: 0;
+// 		}
+
+// 		&__item,
+// 		&__item_half{
+// 			width: 100%;
+// 			margin-left: 0;
+// 			margin-right: 0;
+// 		}
+
+// 		&__label{font-size: 1.5rem;}
+
+// 		&__bottom{display: block;}
+
+// 		&__bottom &__btn{
+// 			margin: 25px 0 0 0;
+
+// 			.btn{
+// 				display: table;
+// 				width: 100%;
+// 				max-width: 280px;
+// 				margin: 0 auto;
+// 			}
+// 		}
+// 	}
+// }

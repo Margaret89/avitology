@@ -7,7 +7,10 @@
 		justify-content: space-between;
 	}
 
-	&__logo{margin-right: 15px;}
+	&__logo{
+		max-width: 248px;
+		margin-right: 15px;
+	}
 
 	&__contacts{
 		display: flex;
@@ -18,9 +21,17 @@
 
 	&__callback{
 		display: inline-block;
-		font-size: 1.6rem;
-		font-weight: 500;
+		@include font(none, 500, 1.6rem, none, $color-blue);
+		text-decoration: underline;
+		text-decoration-color: $color-light-blue;
 		margin-top: 8px;
+		cursor: pointer;
+		transition: all 0.2s ease 0s;
+	}
+
+	&__callback:hover{
+		color: $color-purple;
+		text-decoration-color: $color-purple;
 	}
 }
 

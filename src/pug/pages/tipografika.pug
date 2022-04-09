@@ -24,6 +24,8 @@ block content
 				p <span class="code">text-justify</span> Выравнивание текста по ширине
 				p <span class="code">text-uppercase</span> Все символы текста становятся прописными (верхний регистр)
 				p <span class="code">text-bold</span> Жирный текст
+				p <span class="code">text-red</span> <span class="text-red">Красный текст</span>
+				p <span class="code">text-blue</span> <span class="text-blue">Синий текст</span>
 
 				br
 				br
@@ -48,6 +50,43 @@ block content
 				br
 				div.h2 Кнопки
 				a.btn(href='#') Кнопка
+				br
+				br
+				.bg-purple.elem-border(style="padding: 40px")
+					a.btn.btn_border(href='#') Кнопка
+					
+
+				br
+				br
+				br
+				div.h2 Фоны
+				.bg-light-blue.elem-border(style="padding: 40px")
+					p Сайт рыбатекст поможет дизайнеру, верстальщику, вебмастеру сгенерировать несколько абзацев более менее осмысленного текста рыбы на русском языке, а начинающему оратору отточить навык публичных выступлений в домашних условиях. При создании генератора мы использовали небезизвестный универсальный код речей. Текст генерируется абзацами случайным образом от двух до десяти предложений в абзаце, что позволяет сделать текст более привлекательным и живым для визуально-слухового восприятия.</p>
+				
+				br
+				.bg-purple.elem-border(style="padding: 40px")
+					p Сайт рыбатекст поможет дизайнеру, верстальщику, вебмастеру сгенерировать несколько абзацев более менее осмысленного текста рыбы на русском языке, а начинающему оратору отточить навык публичных выступлений в домашних условиях. При создании генератора мы использовали небезизвестный универсальный код речей. Текст генерируется абзацами случайным образом от двух до десяти предложений в абзаце, что позволяет сделать текст более привлекательным и живым для визуально-слухового восприятия.</p>
+
+				br
+				br
+				br
+				.h2 Табуляция
+				.tabs-page.js-tabs-page
+					ul.tabs-page__list.js-tabs-page-list
+						li.tabs-page__item.js-tabs-page-item(data-item='tab1') Tab1
+						li.tabs-page__item.js-tabs-page-item(data-item='tab2') Tab2
+						li.tabs-page__item.js-tabs-page-item(data-item='tab3') Tab3
+						li.tabs-page__item.js-tabs-page-item(data-item='tab4') Tab4
+					.tabs-page__content.js-tabs-page-content
+						#tab1.tabs-page__content-item.js-tabs-page-content-item.js-tabs-page-content-item
+							| Первый контент
+						#tab2.tabs-page__content-item.js-tabs-page-content-item.js-tabs-page-content-item
+							| Второй контент
+						#tab3.tabs-page__content-item.js-tabs-page-content-item.js-tabs-page-content-item
+							| Третий контент
+						#tab4.tabs-page__content-item.js-tabs-page-content-item.js-tabs-page-content-item
+							| Четвёртый контент
+
 
 				br
 				br
@@ -57,3 +96,103 @@ block content
 						.type-icon__img
 							+svg('ic-call','ic-call', '20', '20')
 						.type-icon__name ic-call
+
+					.type-icon__item
+						.type-icon__img
+							+svg('ic-calc','ic-calc', '18', '23')
+						.type-icon__name ic-calc
+
+					.type-icon__item
+						.type-icon__img
+							+svg('ic-horn','ic-horn', '19', '21')
+						.type-icon__name ic-horn
+
+					.type-icon__item
+						.type-icon__img
+							+svg('ic-aim','ic-aim', '23', '22')
+						.type-icon__name ic-aim
+
+					.type-icon__item
+						.type-icon__img
+							+svg('ic-web','ic-web', '20', '20')
+						.type-icon__name ic-web
+
+					.type-icon__item
+						.type-icon__img
+							+svg('ic-present','ic-present', '19', '21')
+						.type-icon__name ic-present
+
+					.type-icon__item
+						.type-icon__img
+							+svg('ic-search','ic-search', '21', '21')
+						.type-icon__name ic-search
+
+					.type-icon__item
+						.type-icon__img
+							+svg('ic-edit','ic-edit', '21', '21')
+						.type-icon__name ic-edit
+
+					.type-icon__item
+						.type-icon__img
+							+svg('ic-chat','ic-chat', '19', '19')
+						.type-icon__name ic-chat
+
+					.type-icon__item
+						.type-icon__img
+							+svg('ic-private-chat','ic-private-chat', '21', '22')
+						.type-icon__name ic-private-chat
+
+					.type-icon__item
+						.type-icon__img
+							+svg('ic-cart','ic-cart', '21', '21')
+						.type-icon__name ic-cart
+
+					.type-icon__item
+						.type-icon__img
+							+svg('ic-user','ic-user', '20', '20')
+						.type-icon__name ic-user
+
+					.type-icon__item
+						.type-icon__img
+							+svg('ic-lifeline','ic-lifeline', '20', '20')
+						.type-icon__name ic-lifeline
+
+					.type-icon__item
+						.type-icon__img
+							+svg('ic-loop','ic-loop', '20', '20')
+						.type-icon__name ic-loop
+
+					.type-icon__item
+						.type-icon__img
+							+svg('ic-chat-color','ic-chat-color', '20', '20')
+						.type-icon__name ic-chat-color
+
+					.type-icon__item
+						.type-icon__img
+							+svg('ic-text','ic-text', '20', '14')
+						.type-icon__name ic-text
+
+					.type-icon__item
+						.type-icon__img
+							+svg('ic-msg','ic-msg', '20', '20')
+						.type-icon__name ic-msg
+
+					.type-icon__item
+						.type-icon__img
+							+svg('ic-setting','ic-setting', '20', '20')
+						.type-icon__name ic-setting
+
+					.type-icon__item
+						.type-icon__img
+							+svg('ic-graph','ic-graph', '20', '20')
+						.type-icon__name ic-graph
+
+					.type-icon__item
+						.type-icon__img
+							+svg('ic-arr-left','ic-arr-left', '10', '16')
+						.type-icon__name ic-arr-left
+
+					.type-icon__item
+						.type-icon__img
+							+svg('ic-arr-right','ic-arr-right', '10', '16')
+						.type-icon__name ic-arr-right

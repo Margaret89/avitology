@@ -4,8 +4,326 @@ block variables
 	- var title = 'Главная';
 
 block content
-	section
+	section.offer-block
+		.st-width.bg-light-blue.elem-border
+			.container
+				.row
+					.col-6
+						.offer-block__content
+							h1 <span class="h1-big">Увеличим</span> ваши продажи на&nbsp;Авито <span class="text-red">до 200%</span>
+
+							.offer-block__note Окупаемость ваших вложений уже через <b>10&nbsp;дней</b>
+
+							a.btn(href='#')
+								+svg('ic-calc','ic-calc', '18', '23')
+								|Рассчитать стоимость
+
+					.col-6.d-flex.align-items-end
+						img(src="assets/img/package.png", alt="")
+
+	section.services-wrap
 		.container
 			.row
 				.col-12
-				
+					.tabs-page.js-tabs-page
+						.tabs-page__top
+							h2 Наши услуги
+
+							ul.tabs-page__list.js-tabs-page-list
+								li.tabs-page__item.js-tabs-page-item(data-item='tab1') Кратко
+								li.tabs-page__item.js-tabs-page-item(data-item='tab2') Подробно
+
+						.tabs-page__content.js-tabs-page-content
+							#tab1.tabs-page__content-item.js-tabs-page-content-item.js-tabs-page-content-item
+								.services
+									.row
+										-
+											var list=[
+												{icon:'ic-horn', icon_width:'19', icon_height:'21', title:'Берем всю работу с досками объявлений под ключ на себя', text:'Это дает возможность проводить А/Б тесты на объявлениях...'},
+												{icon:'ic-aim', icon_width:'23', icon_height:'22', title:'Составляем стратегию размещения', text:'Это дает возможность проводить А/Б тесты на объявлениях с разными...'},
+												{icon:'ic-web', icon_width:'20', icon_height:'20', title:'Выгружаем клиента на Авито, Юлу, Яндекс объявления, Руджази, ВКобъявления', text:'Это дает возможность проводить А/Б тесты...'},
+												{icon:'ic-present', icon_width:'19', icon_height:'21', title:'Даем скидку 20% на платные сервисы Юлы', text:'Это дает возможность проводить А/Б тесты на объявлениях с разными креативами и заголовками...'},
+												{icon:'ic-search', icon_width:'21', icon_height:'21', title:'Оформляем объявления так, чтобы они были выше в поиске', text:'Это дает возможность проводить А/Б тесты на объявлениях с разными креативами и заголовками...'},
+												{icon:'ic-edit', icon_width:'21', icon_height:'21', title:'Пишем тексты, которые повышают конверсию из просмотра в звонок', text:'Это дает возможность проводить А/Б тесты...'},
+												{icon:'ic-chat', icon_width:'19', icon_height:'19', title:'Делаем равномерную публикацию объявлений', text:'Это дает возможность проводить А/Б тесты на объявлениях...'},
+												{icon:'ic-private-chat', icon_width:'21', icon_height:'22', title:'Решаем все проблемы с блокировкой и модерацией', text:'Это дает возможность проводить А/Б тесты на объявлениях с разными...'},
+												{icon:'ic-cart', icon_width:'21', icon_height:'21', title:'Автоматизируем выгрузку товаров с сайта', text:'Это дает возможность проводить А/Б тесты на объявлениях...'},
+												{icon:'ic-user', icon_width:'20', icon_height:'20', title:'Даем личного опытного менеджера', text:'Это дает возможность проводить А/Б тесты на объявлениях с разными...'},
+												{icon:'ic-lifeline', icon_width:'20', icon_height:'20', title:'Устанавливаем и настраиваем онлайн консультанта', text:'Это дает возможность проводить А/Б тесты...'},
+											]
+										each item in list
+											.col-3
+												.service-item
+													.service-item__icon
+														+svg(item.icon, item.icon, item.icon_width, item.icon_height)
+													.service-item__title= item.title
+													.service-item__text= item.text
+
+							#tab2.tabs-page__content-item.js-tabs-page-content-item.js-tabs-page-content-item
+								p Продвижение объявлений на Авито и раскрутка аккаунта. Разработка и реализации стратегии эффективного продвижения интернет-магазинов, быстрое достижение поставленных целей
+
+								p Раскрутка аккаунта Авито – задача, требующая внимания и профессионализма. Знание и соблюдение нюансов работы на популярной торговой площадке привлечет новых клиентов и увеличит прирост заявок. Но эффективность работы зависит от правильно разработанной и реализованной стратегии.
+
+								p Мы предлагаем эффективное продвижение объявлений на Авито для интернет-магазинов и сферы услуг. Для раскрутки используются проверенные и результативные методы, позволяющие в кратчайшие сроки достигнуть поставленных целей и начать получать прибыль.
+								p На Авито есть два типа профиля: частное лицо и компания. Первый подходит тем, кто иногда продаёт личные вещи и получает деньги наличными или на карту. Второй — продавцам, которые регулярно предлагают товары и услуги, хотят оплачивать услуги Авито с расчётного счёта и получать закрывающие документы.
+								p Если у вас уже есть профиль частного лица. Можно использовать его и просто изменить тип профиля на компанию. Но, если вы размещаете в аккаунте личные объявления, для бизнеса лучше создать новый — чтобы клиенты компании не увидели личных объявлений.
+														
+	section.advant-wrap
+		.container
+			.row
+				.col-6
+					h2 Преимущества нашей компании
+
+				.col-3
+					.advant-item
+						.advant-item__img
+							img(src="assets/img/advant1.png", alt="")
+						.advant-item__text С вами работает <b>персональный менеджер</b>
+
+				.col-3
+					.advant-item
+						.advant-item__img
+							img(src="assets/img/advant2.png", alt="")
+						.advant-item__text <b>Регулярно отслеживаем заявки</b> с целью их увеличения
+
+				.col-3
+					.advant-item
+						.advant-item__img
+							img(src="assets/img/advant3.png", alt="")
+						.advant-item__text <b>Работаем с фидом Яндекс маркета</b> или настроим выгрузку сами
+
+				.col-3
+					.advant-item
+						.advant-item__img
+							img(src="assets/img/advant4.png", alt="")
+						.advant-item__text <b>Консультируем ваших менеджеров</b> по общению с клиентами
+
+				.col-3
+					.advant-item
+						.advant-item__img
+							img(src="assets/img/advant5.png", alt="")
+						.advant-item__text <b>Можем массово редактировать фотографии</b> или накладывать стикеры на изображения
+
+				.col-3
+					.advant-item
+						.advant-item__img
+							img(src="assets/img/advant6.png", alt="")
+						.advant-item__text <b>Имеем хорошие отношения</b> с менеджментом авито
+
+	section.run-line
+		.run-line__item
+			span.run-line__label Авитолог<span>и</span>я — 
+			span.run-line__val Увеличим ваши продажи
+		.run-line__item
+			span.run-line__label Авитолог<span>и</span>я — 
+			span.run-line__val Увеличим ваши продажи
+		.run-line__item
+			span.run-line__label Авитолог<span>и</span>я — 
+			span.run-line__val Увеличим ваши продажи
+		.run-line__item
+			span.run-line__label Авитолог<span>и</span>я — 
+			span.run-line__val Увеличим ваши продажи
+
+	section.steps-wrap
+		.container
+			.row
+				.col-12
+					h2 Этапы работы
+
+			.steps
+				.row
+					-
+						var list=[
+							{icon:'ic-loop', icon_width:'50', icon_height:'50', text_bold:'Анализ ниши ', text:'в авито и ваших конкурентов'},
+							{icon:'ic-chat-color', icon_width:'45', icon_height:'45', text_bold:'Согласование ', text:'ассортимента и настройка фида'},
+							{icon:'ic-text', icon_width:'50', icon_height:'36', text_bold:'Формирование текстов ', text:'объявлений и заголовков'},
+							{icon:'ic-msg', icon_width:'50', icon_height:'50', text_bold:'Выгрузка объявлений ', text:'и закупка публикаций'},
+							{icon:'ic-setting', icon_width:'50', icon_height:'50', text_bold:'Настройка аналитики, ', text:'телефонии и онлайн консультанта'},
+							{icon:'ic-graph', icon_width:'55', icon_height:'55', text_first:'После запуска ', text_bold:'анализируем статистику, ', text:'конверсию и внести правки для их увеличения'},
+							
+						]
+					each item, index in list
+						.col-4
+							.step-item
+								.step-item__icon
+									+svg(item.icon, item.icon, item.icon_width, item.icon_height)
+									.step-item__num= index+1
+
+								.step-item__text
+									if(item.text_first)
+										=item.text_first
+
+									b= item.text_bold
+									=item.text
+
+	section.form-site-wrap
+		.st-width.bg-light-blue.elem-border
+			.container
+				.row
+					.col-5
+						.form-site-wrap__img
+							img(src="assets/img/phone-offer.png", alt="")
+					.col-7
+						.js-valid-form
+							form.form-site.form-site
+								.form-site__title Не нашли подходящие условия?
+								.form-site__text Обсудим индивидуальный тариф или комплексную стратегию работы <b>от 15 000 ₽</b>
+								
+								.form-site__content
+									.form-site__item.form-site__item_half.js-form-site-item
+										.form-site__field
+											input(type="text", required="required", placeholder="Ваше имя")
+
+									.form-site__item.form-site__item_half.js-form-site-item
+										.form-site__field
+											input(type="text", class="js-phone", required="required", placeholder="Номер телефона")
+
+								.form-site__btn
+									button(type="submit").btn.js-btn-submit Оставить заявку
+
+	section.review-slider-wrap
+		.container
+			.row
+				.col-12
+					h2 Что говорят наши клиенты?
+
+					.review-slider.js-review-slider
+						-
+							var list=[
+								{img:'review1.png'},
+								{img:'review2.png'},
+								{img:'review3.png'},
+								{img:'review2.png'},
+								{img:'review3.png'},
+								{img:'review1.png'},
+								{img:'review2.png'},
+								{img:'review3.png'},
+								{img:'review2.png'},
+							]
+						each item in list
+							.review-slider__item
+								img(src="assets/img/"+item.img, alt="")
+
+	section.tariffs-wrap
+		.container
+			.row
+				.col-12
+					h2 Тарифы
+
+				.tariffs
+					.row
+						-
+							var list=[
+								{
+									title:'Базовый',
+									text:[
+										'Размещаем объявления',
+										'Отправляем отчеты и статистику',
+										'Избегаем блокировок',
+										'Общаемся со службой поддержки Авито',
+									],
+									price:'2 800 ₽'
+								},
+								{
+									color: 'red',
+									title:'Популярный',
+									text:[
+										'Совместная аналитика в Avito.Pro',
+										'Настройка услуг продвижения',
+										'Автопродление объявлений',
+										'Оформление описания объявлений',
+										'5 отзывов каждый месяц',
+										'Логотип на обложках объявлений',
+										'Дизайн фона на страницах магазина',
+										'Установка коллтрекинга',
+										'Интеграция с CRM',
+									],
+									price:'16 990 ₽'
+								},
+								{
+									color:'puple',
+									title:'Тариф №3',
+									text:[
+										'Совместная аналитика в Avito.Pro',
+										'Настройка услуг продвижения',
+										'Логотип на обложках объявлений',
+										'Дизайн фона на страницах магазина',
+										'Установка коллтрекинга',
+										'Интеграция с CRM',
+									],
+									price:'11 400 ₽'
+								},
+							]
+						each item in list
+							.col-4
+								.tariff-item(class=item.color?'tariff-item_'+item.color:'')
+									.tariff-item__title
+
+									.tariff-item__content
+										each text in item.text
+											.tariff-item__cond= text
+
+									.tariff-item__bottom
+										.tariff-item__price= item.price
+
+										a.btn(href='#') Заказать
+
+	section.cases-wrap
+		.container
+			.row
+				.col-12
+					.cases-wrap__top
+						h2 Кейсы
+						.btn-arr-wrap.js-cases-slider-arr
+
+		.cases-slider.js-cases-slider
+			-
+				var list=[
+					{img:'case1.jpg', text:'Настройка аналитики, телефонии и онлайн консультанта'},
+					{img:'case2.jpg', text:'Формирование текстов объявлений и заголовков'},
+					{img:'case2.jpg', text:'Формирование текстов объявлений и заголовков'},
+					{img:'case1.jpg', text:'Настройка аналитики, телефонии и онлайн консультанта'},
+					{img:'case1.jpg', text:'Настройка аналитики, телефонии и онлайн консультанта'},
+					{img:'case2.jpg', text:'Формирование текстов объявлений и заголовков'},
+				]
+			each item in list
+				.cases-slider__item
+					.cases-slider__img
+						img(src="assets/img/"+item.img, alt="")
+					.cases-slider__text= item.text
+
+	section.team-wrap
+		.st-width.bg-purple.elem-border
+			.container
+				.row
+					.col-12
+						h2 Наши сотрудники
+
+				.team
+					.row
+						-
+							var list=[
+								{img:'person1.png', name:'Анастасия Белоусова', post:'руководитель отдела клиентского сервиса'},
+								{img:'person2.png', name:'Олеся Оборская', post:'руководитель отдела дизайна'},
+								{img:'person3.png', name:'Максим Оганов', post:'Founder руководитель отдела продаж и аналитики'},
+								{img:'person4.png', name:'Нинель Королёва', post:'руководитель отдела маркетинга'},
+							]
+						each item in list
+							.col-3
+								.team-item
+									.team-item__img
+										img(src="assets/img/"+item.img, alt="")
+									.team-item__name= item.name
+									.team-item__post= item.post
+	
+	section.about
+		.container
+			.row
+				.col-6.d-flex.align-items-center
+					img(src="assets/img/graph.png", alt="")
+
+				.col-6
+					h2 Как зарегистрировать компанию на Авито
+
+					p На Авито есть два типа профиля: частное лицо и компания. Первый подходит тем, кто иногда продаёт личные вещи и получает деньги наличными или на карту. Второй — продавцам, которые регулярно предлагают товары и услуги, хотят оплачивать услуги Авито с расчётного счёта и получать закрывающие документы.
+					p Если у вас уже есть профиль частного лица. Можно использовать его и просто изменить тип профиля на компанию. Но, если вы размещаете в аккаунте личные объявления, для бизнеса лучше создать новый — чтобы клиенты компании не увидели личных объявлений.

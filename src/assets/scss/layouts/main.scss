@@ -55,6 +55,13 @@ h5,.h5
 h1,.h1{
 	font-size: 6rem;
 	margin-bottom: 3.5rem;
+	line-height: 1.35;
+	letter-spacing: -3px;
+}
+
+.h1-big{
+	font-size: 8rem;
+	letter-spacing: 0;
 }
 
 h2,.h2{
@@ -63,8 +70,9 @@ h2,.h2{
 }
 
 h3,.h3{
-	font-size: 4rem;
-	margin-bottom: 2rem ;
+	font-size: 3.8rem;
+	letter-spacing: -1.5px;
+	margin-bottom: 4rem;
 }
 
 h4,.h4{
@@ -88,6 +96,7 @@ h6,.h6{
 	min-height: 100vh;
 	width: 100%;
 	margin: 0 auto;
+	overflow: hidden;
 }
 
 main{
@@ -102,9 +111,10 @@ button.btn{
 	display: inline-flex;
 	align-items: center;
 	justify-content: center;
+	column-gap: 20px;
 	height: 7.2rem;
 	min-width: 200px;
-	background: $color-blue;
+	background: $color-blue linear-gradient(90deg, #00AAFF 0%, #48C2FF 100%);
 	border: none;
 	outline: none;
 	border-radius: 3.6rem;
@@ -153,34 +163,31 @@ button.btn:hover{
 	color: #FFF;
 }
 
-// .btn_border,
-// input[type="submit"].btn_border,
-// button.btn_border{
-// 	border: 1px solid #b1b1b1;
-// 	background: transparent;
-// }
+.btn{
+	.icon{fill: #fff;}
+}
 
-// .btn_border,
-// button.btn_border{
-// 	transition: border 0.2s ease 0.1s;
-// }
+.btn_border,
+input[type="submit"].btn_border,
+button.btn_border{
+	border: 1px solid #fff;
+	background: transparent;
+}
 
-// input[type="submit"].btn_border{transition: border 0.2s ease 0s;}
+.btn_border,
+button.btn_border{
+	transition: border 0.2s ease 0.1s, background 0.2s ease 0.1s;
+}
 
-// .btn_border:hover,
-// input[type="submit"].btn_border:hover,
-// button.btn_border:hover{
-// 	background: transparent;
-// 	border-color: #686868;
-// 	text-decoration: underline;
-// 	text-decoration-color: #686868;
-// }
+input[type="submit"].btn_border{transition: border 0.2s ease 0s, background 0.2s ease 0s;}
 
-// .btn{
-// 	.icon{fill: #fff;}
-// }
-
-
+.btn_border:hover,
+input[type="submit"].btn_border:hover,
+button.btn_border:hover{
+	background: #fff;
+	border-color: #fff;
+	color: $color-purple;
+}
 
 .code{
 	background-color: #f7f7f7;
@@ -197,4 +204,22 @@ button.btn:hover{
 .text-right{text-align: right !important;}
 .text-justify{text-align: justify !important;}
 .text-uppercase{text-transform: uppercase !important;}
-.text-bold {font-weight: 700 !important;}
+.text-bold{font-weight: 700 !important;}
+.text-red{color: $color-red;}
+.text-blue{color: $color-blue;}
+
+.bg-light-blue{background-color: $color-light-blue;}
+
+.bg-purple{
+	background-color: $color-purple;
+	color: #fff;
+}
+
+.elem-border{border-radius: 60px;}
+
+.st-width{
+	width: 1600px;
+	max-width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+}

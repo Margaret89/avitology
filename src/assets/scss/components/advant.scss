@@ -1,0 +1,15 @@
+/*-------------- advant -----------------*/
+.advant-wrap{
+	margin: 100px 0;
+}
+
+.advant-item{
+	margin-bottom: 77px;
+
+	&__img{margin-bottom: 26px;}
+
+	&__text{
+		font-size: 1.6rem;
+		line-height: 1.6;
+	}
+}

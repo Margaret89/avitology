@@ -1,0 +1,65 @@
+/*-------------- run-line -----------------*/
+.run-line{
+	display: flex;
+	font-family: $font-bitter;
+	font-size: 4rem;
+	margin: 100px 0;
+	white-space: nowrap;
+	position: relative;
+
+	&::before{
+		content: '';
+		display: inline-block;
+		width: 684px;
+		height: 684px;
+		border-radius: 50%;
+		background: #ECF5FC;
+		position: absolute;
+		top: -100px;
+		right: -500px;
+	}
+
+	&__item{
+		display: inline-flex;
+		position: relative;
+		margin: 0 48px;
+	}
+
+	&__item::after{
+		content: '';
+		display: inline-block;
+		width: 8px;
+		height: 8px;
+		border-radius: 50%;
+		background: $color-green;
+		position: absolute;
+		top: 50%;
+		right: -20px;
+		transform: translateY(-50%);
+	}
+
+	&__label{
+		font-weight: 900;
+		color: #000;
+	}
+
+	&__val{
+		font-weight: bold;
+		color: #888;
+	}
+}
+
+// @keyframes run-stroke {
+// 	from {left: 100%;}
+// 	to {left: -1500px;}
+// }
+
+// .advant-header{
+// 	-ms-flex-wrap: nowrap;
+// 	flex-wrap: nowra;
+// 	-webkit-box-pack: start;
+// 	-ms-flex-pack: start;
+// 	justify-content: flex-start;
+// 	position: relative;
+// 	animation: run-stroke  20s infinite linear;
+// }

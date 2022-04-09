@@ -1,0 +1,40 @@
+/*-------------- steps -----------------*/
+.steps-wrap{margin: 100px 0;}
+
+.step-item{
+	margin-bottom: 60px;
+
+	&__icon{
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		width: 60px;
+		height: 60px;
+		margin-bottom: 22px;
+		position: relative;
+
+		.icon{
+			max-height: 100%;
+			fill: $color-blue;
+		}
+	}
+
+	&__num{
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		width: 32px;
+		height: 32px;
+		border-radius: 50%;
+		background: #ECF5FC;
+		@include font(none, bold, 1.6rem, 1, $color-text);
+		position: absolute;
+		top: 0;
+		right: -50px;
+	}
+
+	&__text{
+		font-size: 1.6rem;
+		line-height: 1.6;
+	}
+}

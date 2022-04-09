@@ -26,6 +26,8 @@ header.header
 								+svg('ic-call','ic-call', '20', '20')
 							span.contact-phone__text 8 (812) 955-29-06
 						
-						a(href="#").header__callback Обратный звонок
+						//- a(data-fancybox='' data-src='#feadback' href='javascript:;') Заказать обратный звонок
+						.header__callback(data-fancybox="dialog", data-src="#feadback") Обратный звонок
+						//- <button data-fancybox="simple-dialog" data-src="#feadback" data-type="clone" class="button button--primary">Launch Dialog</button>
 							
 		

@@ -1,0 +1,4 @@
+/*-------------- fancybox -----------------*/
+.fancybox__content{border-radius: 26px;}
+.fancybox__content :focus:not(.carousel__button.is-close){outline: none;}
+.carousel__button svg{filter: none;}
