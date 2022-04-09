@@ -1,0 +1,35 @@
+.footer{
+	position: relative;
+	padding: 40px 0;
+
+	&::before{
+		content: '';
+		display: inline-block;
+		width: 1600px;
+		height: 1px;
+		background: linear-gradient(to right, rgba(161,105,250,1) 0%, rgba(251,97,100,1) 50%, rgba(151,207,38,1) 100%);
+		position: absolute;
+		top: 0;
+		left: 50%;
+		transform: translateX(-50%);
+	}
+
+	&__content{
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+
+	&__logo{margin-right: 15px;}
+
+	&__copyright{
+		@include font(normal, normal, 1.4rem, 1.2, $color-text);
+		margin: 0 15px;
+	}
+
+	.contact-phone{
+		margin-left: 15px;
+
+		&__text{font-size: 3.2rem;}
+	}
+}
