@@ -34,3 +34,52 @@
 		background-position: bottom right;
 	}
 }
+
+@media (max-width: 1239px) {
+	.offer-block{
+		&__content{padding: 60px 0 80px;}
+	}
+}
+
+@media (max-width: 991px) {
+	.offer-block{
+		margin-bottom: 80px;
+		&__content{padding: 40px 0 0;}
+
+		&__img{
+			width: 100%;
+			text-align: right;
+			margin-top: -60px;
+
+			img{max-height: 200px;}
+		}
+	}
+}
+
+@media (max-width: 767px) {
+	.offer-block{
+		.h1, h1{text-align: center;}
+
+		&__content{
+			padding: 30px 0 0;
+			text-align: center;
+		}
+
+		&__note{
+			font-size: 1.6rem;
+			text-align: left;
+			padding-left: 50px;
+			margin-left: auto;
+			margin-right: auto;
+		}
+
+		&__note::before{left: 15px;}
+		&__content .btn{margin: 33px auto 0;}
+
+		&__img{
+			text-align: center;
+			margin-top: -85px;
+			img{max-height: 350px;}
+		}
+	}
+}

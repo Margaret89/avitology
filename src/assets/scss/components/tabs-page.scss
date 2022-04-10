@@ -41,3 +41,24 @@
 		h2, .h2{margin-right: 50px;}
 	}
 }
+
+@media (max-width: 767px) {
+	.tabs-page{
+		&__top{
+			display: block;
+			text-align: center;
+
+			h2, .h2{margin: 0 0 10px;}
+		}
+
+		&__list{
+			justify-content: center;
+			margin-bottom: 30px;
+		}
+
+		&__item{
+			min-height: 4.2rem;
+			font-size: 1.4rem;
+		}
+	}
+}

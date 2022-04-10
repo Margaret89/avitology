@@ -32,20 +32,36 @@ if($('.js-review-slider').length){
 		centerPadding: '0',
 		prevArrow: '<button id="prev" type="button" class="btn-arr btn-arr_left"><svg class="icon ic-arr-left" width="10" height="16"><use xlink:href="/assets/sprites/sprite.svg#ic-arr-left"></use></svg></button>',
 		nextArrow: '<button id="next" type="button" class="btn-arr btn-arr_right"><svg class="icon ic-arr-right" width="10" height="16"><use xlink:href="/assets/sprites/sprite.svg#ic-arr-right"></use></svg></button>',
+		responsive: [
+			{
+				breakpoint: 768,
+				settings: {
+					slidesToShow: 1,
+					arrows: false,
+				}
+			},
+		]
 	});
 }
 
 // Слайдер кейсов
 if($('.js-cases-slider').length){
 	$('.js-cases-slider').slick({
-		// centerMode: true,
-		// centerPadding: 'calc(50% - 585px)',
 		slidesToShow: 2,
 		slidesToScroll: 1,
 		dots: true,
 		appendArrows: $('.js-cases-slider-arr'),
 		prevArrow: '<button id="prev" type="button" class="btn-arr btn-arr_left"><svg class="icon ic-arr-left" width="10" height="16"><use xlink:href="/assets/sprites/sprite.svg#ic-arr-left"></use></svg></button>',
 		nextArrow: '<button id="next" type="button" class="btn-arr btn-arr_right"><svg class="icon ic-arr-right" width="10" height="16"><use xlink:href="/assets/sprites/sprite.svg#ic-arr-right"></use></svg></button>',
+		responsive: [
+			{
+				breakpoint: 768,
+				settings: {
+					slidesToShow: 1,
+					arrows: false,
+				}
+			},
+		]
 	});
 }
 
@@ -101,7 +117,6 @@ if($('.js-valid-form').length){
 	$('.js-valid-form').on('click', '.js-btn-submit', function(e){
 		var $form = $(this).closest('form');
 		errorField($form, e);
-		// var msg = $(this).closest('.js-valid-form').data('msg');
 	});
 
 	$('.js-valid-form').on('submit', 'form', function(e){
@@ -109,8 +124,6 @@ if($('.js-valid-form').length){
 		var successTitle = $(this).closest('.js-valid-form').data('success');
 		var successText = $(this).closest('.js-valid-form').data('text');
 		var tempSuccessTitle = $('.js-success-alert-title').text();
-
-		console.log('11111111');
 
 		if(msg != 'none'){
 			if(successTitle){
@@ -136,3 +149,10 @@ if($('.js-valid-form').length){
 
 // Маска для телефона
 Inputmask('+7 (999) 999-9999').mask('.js-phone');
+
+// Открыть/Закрыть мобильное меню
+$('.js-btn-menu').on('click',function(){
+	$(this).toggleClass('active');
+	$('.js-top-menu').toggleClass('open');
+	$('.js-body').toggleClass('no-scroll');
+});

@@ -6,7 +6,7 @@ header.header
 					.header__logo
 						img(src="assets/img/logo.svg", alt="")
 
-					nav.top-menu
+					nav.top-menu.js-top-menu
 						ul.top-menu__list
 							-
 								var list=[
@@ -20,14 +20,13 @@ header.header
 								li.top-menu__item
 									a(href="#").top-menu__link= item.text
 
-					.header__contacts
+					.header__contacts.d-none.d-lg-flex
 						a(href="tel:+78129552906").contact-phone
 							span.contact-phone__icon
 								+svg('ic-call','ic-call', '20', '20')
 							span.contact-phone__text 8 (812) 955-29-06
 						
-						//- a(data-fancybox='' data-src='#feadback' href='javascript:;') Заказать обратный звонок
 						.header__callback(data-fancybox="dialog", data-src="#feadback") Обратный звонок
-						//- <button data-fancybox="simple-dialog" data-src="#feadback" data-type="clone" class="button button--primary">Launch Dialog</button>
-							
-		
+						
+					.ic-hamburger.d-lg-none.js-btn-menu
+						span

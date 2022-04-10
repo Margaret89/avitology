@@ -17,3 +17,20 @@
 
 	h2, .h2{margin-bottom: 6.5rem;}
 }
+
+@media (max-width: 991px) {
+	.about{
+		&__content{margin-bottom: 30px;}
+	}
+}
+
+@media (max-width: 767px) {
+	.about{
+		h2, .h2{margin-bottom: 4rem;}
+		&__content{text-align: center;}
+		&__content::before{
+			top: -25px;
+			right: 22%;
+		}
+	}
+}

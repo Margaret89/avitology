@@ -8,9 +8,9 @@ block content
 		.st-width.bg-light-blue.elem-border
 			.container
 				.row
-					.col-6
+					.col-lg-6
 						.offer-block__content
-							h1 <span class="h1-big">Увеличим</span> ваши продажи на&nbsp;Авито <span class="text-red">до 200%</span>
+							h1 <span class="h1-big">Увеличим</span><br>ваши продажи на&nbsp;Авито <span class="text-red">до&nbsp;200%</span>
 
 							.offer-block__note Окупаемость ваших вложений уже через <b>10&nbsp;дней</b>
 
@@ -18,8 +18,9 @@ block content
 								+svg('ic-calc','ic-calc', '18', '23')
 								|Рассчитать стоимость
 
-					.col-6.d-flex.align-items-end
-						img(src="assets/img/package.png", alt="")
+					.col-lg-6.d-flex.align-items-end
+						.offer-block__img
+							img(src="assets/img/package.png", alt="")
 
 	section.services-wrap
 		.container
@@ -52,11 +53,12 @@ block content
 												{icon:'ic-lifeline', icon_width:'20', icon_height:'20', title:'Устанавливаем и настраиваем онлайн консультанта', text:'Это дает возможность проводить А/Б тесты...'},
 											]
 										each item in list
-											.col-3
+											.col-md-4.col-lg-3
 												.service-item
-													.service-item__icon
-														+svg(item.icon, item.icon, item.icon_width, item.icon_height)
-													.service-item__title= item.title
+													.service-item__top
+														.service-item__icon
+															+svg(item.icon, item.icon, item.icon_width, item.icon_height)
+														.service-item__title= item.title
 													.service-item__text= item.text
 
 							#tab2.tabs-page__content-item.js-tabs-page-content-item.js-tabs-page-content-item
@@ -71,46 +73,46 @@ block content
 	section.advant-wrap
 		.container
 			.row
-				.col-6
+				.col-lg-6
 					h2 Преимущества нашей компании
 
-				.col-3
+				.col-md-4.col-lg-3
 					.advant-item
 						.advant-item__img
 							img(src="assets/img/advant1.png", alt="")
 						.advant-item__text С вами работает <b>персональный менеджер</b>
 
-				.col-3
+				.col-md-4.col-lg-3
 					.advant-item
 						.advant-item__img
 							img(src="assets/img/advant2.png", alt="")
 						.advant-item__text <b>Регулярно отслеживаем заявки</b> с целью их увеличения
 
-				.col-3
+				.col-md-4.col-lg-3
 					.advant-item
 						.advant-item__img
 							img(src="assets/img/advant3.png", alt="")
 						.advant-item__text <b>Работаем с фидом Яндекс маркета</b> или настроим выгрузку сами
 
-				.col-3
+				.col-md-4.col-lg-3
 					.advant-item
 						.advant-item__img
 							img(src="assets/img/advant4.png", alt="")
 						.advant-item__text <b>Консультируем ваших менеджеров</b> по общению с клиентами
 
-				.col-3
+				.col-md-4.col-lg-3
 					.advant-item
 						.advant-item__img
 							img(src="assets/img/advant5.png", alt="")
 						.advant-item__text <b>Можем массово редактировать фотографии</b> или накладывать стикеры на изображения
 
-				.col-3
+				.col-md-4.col-lg-3
 					.advant-item
 						.advant-item__img
 							img(src="assets/img/advant6.png", alt="")
 						.advant-item__text <b>Имеем хорошие отношения</b> с менеджментом авито
 
-	section.run-line
+	section.run-line.d-none.d-md-block
 		.run-line__content
 			.run-line__item
 				span.run-line__label Авитолог<span class="text-blue">и</span>я — 
@@ -144,7 +146,7 @@ block content
 							
 						]
 					each item, index in list
-						.col-4
+						.col-md-6.col-lg-4
 							.step-item
 								.step-item__icon
 									+svg(item.icon, item.icon, item.icon_width, item.icon_height)
@@ -161,14 +163,14 @@ block content
 		.st-width.bg-light-blue.elem-border
 			.container
 				.row
-					.col-5
+					.col-lg-5.order-2.order-lg-1
 						.form-site-wrap__img
 							img(src="assets/img/phone-offer.png", alt="")
-					.col-7
+					.col-lg-7.order-1.order-lg-2
 						.js-valid-form
 							form.form-site.form-site
 								.form-site__title Не нашли подходящие условия?
-								.form-site__text Обсудим индивидуальный тариф или комплексную стратегию работы <b>от 15 000 ₽</b>
+								.form-site__text Обсудим индивидуальный тариф или комплексную стратегию работы <b>от&nbsp;15&nbsp;000&nbsp;₽</b>
 								
 								.form-site__content
 									.form-site__item.form-site__item_half.js-form-site-item
@@ -256,7 +258,7 @@ block content
 								},
 							]
 						each item in list
-							.col-4
+							.col-lg-4
 								.tariff-item(class=item.color?'tariff-item_'+item.color:'')
 									.tariff-item__title= item.title
 
@@ -310,7 +312,7 @@ block content
 								{img:'person4.png', name:'Нинель Королёва', post:'руководитель отдела маркетинга'},
 							]
 						each item in list
-							.col-3
+							.col-md-6.col-lg-3
 								.team-item
 									.team-item__img
 										img(src="assets/img/"+item.img, alt="")
@@ -320,10 +322,10 @@ block content
 	section.about
 		.container
 			.row
-				.col-6.d-flex.align-items-center
+				.col-lg-6.d-flex.align-items-center.order-2.order-lg-1
 					img(src="assets/img/graph.png", alt="")
 
-				.col-6
+				.col-lg-6.order-1.order-lg-2
 					.about__content
 						h2 Как зарегистрировать компанию на Авито
 

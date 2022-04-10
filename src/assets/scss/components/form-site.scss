@@ -57,7 +57,7 @@
 		width: 100%;
 		background: #fff;
 		font-family: $font-site;
-		@include font(none, 500, 1.6rem, 6.8rem, $color-text);
+		@include font(none, normal, 1.6rem, 6.8rem, $color-text);
 		padding: 0 40px;
 		border-radius: 3.4rem;
 		border: none;
@@ -72,6 +72,15 @@
 		line-height: 1.6;
 		padding-top: 1rem;
 		padding-bottom: 1rem;
+	}
+
+	input[type="text"]::placeholder,
+	input[type="number"]::placeholder,
+	input[type="email"]::placeholder,
+	input[type="password"]::placeholder,
+	textarea::placeholder{
+		color: #8E8E8E;
+		opacity: 1;
 	}
 
 	input[type="text"]:focus,
@@ -179,6 +188,15 @@
 			color: #fff;
 		}
 
+		input[type="text"]::placeholder,
+		input[type="number"]::placeholder,
+		input[type="email"]::placeholder,
+		input[type="password"]::placeholder,
+		textarea::placeholder{
+			color: #fff;
+			opacity: 0.5;
+		}
+
 		input[type="text"]:focus,
 		input[type="number"]:focus,
 		input[type="email"]:focus,
@@ -189,42 +207,65 @@
 	}
 }
 
-// .main-user-consent-request-popup{z-index: 100010;}
+@media (max-width: 991px) {
+	.form-site-wrap{
+		.form-site{padding: 60px 0;}
 
-// @media (max-width: 767px) {
-// 	.popup-form{
-// 		.form-site{
-// 			&__btn{text-align: center;}
+		&__img{
+			justify-content: center;
+			img{max-height: 300px;}
+		}
+	}
+}
 
-// 		}
-// 	}
+@media (max-width: 767px) {
+	.form-site-wrap{
+		.form-site{padding: 40px 0 30px;}
+		&__img{
+			img{margin-bottom: -40px;}
+		}
+	}
 
-// 	.form-site{
-// 		&__content{
-// 			margin-left: 0;
-// 			margin-right: 0;
-// 		}
+	.form-site{
+		&__title{
+			font-size: 3rem;
+			line-height: 1.4;
+			text-align: center;
+			margin-bottom: 12px;
+		}
 
-// 		&__item,
-// 		&__item_half{
-// 			width: 100%;
-// 			margin-left: 0;
-// 			margin-right: 0;
-// 		}
+		&__text{
+			font-size: 1.6rem;
+			text-align: center;
+			margin-bottom: 30px;
+		}
 
-// 		&__label{font-size: 1.5rem;}
+		&__item{margin-bottom: 12px;}
+		&__item_half{width: calc(100% - 20px);}
 
-// 		&__bottom{display: block;}
+		&__btn_half{
+			.btn{width: calc(100% - 10px);}
+		}
 
-// 		&__bottom &__btn{
-// 			margin: 25px 0 0 0;
+		input[type="text"],
+		input[type="email"],
+		input[type="number"],
+		input[type="password"],
+		textarea{
+			height: 6rem;
+			border-radius: 3rem;
+			text-align: center;
+		}
+	}
 
-// 			.btn{
-// 				display: table;
-// 				width: 100%;
-// 				max-width: 280px;
-// 				margin: 0 auto;
-// 			}
-// 		}
-// 	}
-// }
+	.popup-form,
+	.success-alert{
+		padding: 50px 15px
+	}
+
+	.success-alert ~ .carousel__button.is-close,
+	.popup-form ~ .carousel__button.is-close{
+		top: 15px;
+		right: 15px;
+	}
+}

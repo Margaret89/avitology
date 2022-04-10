@@ -67,3 +67,48 @@
 		margin-top: 7px;
 	}
 }
+
+@media (max-width: 1239px) {
+	.team-wrap{
+		.st-width{padding: 60px 0 40px;}
+	}
+
+	.team{
+		&::before{
+			top: 0;
+			left: 0;
+		}
+	}
+}
+
+@media (max-width: 767px) {
+	.team-wrap{
+		margin: 88px 0 77px;
+		.st-width{padding: 40px 0 0;}
+		h2, .h2{margin-bottom: 0;}
+	}
+
+	.team{
+		padding-bottom: 0;
+
+		&::before{
+			top: 27px;
+			left: auto;
+			right: 40px;
+		}
+
+		&::after{
+			top: 373px;
+			right: auto;
+			left: 26px;
+		}
+	}
+
+	.team-item{
+		max-width: 270px;
+		margin-left: auto;
+		margin-right: auto;
+
+		&__img{margin-bottom: 15px;}
+	}
+}

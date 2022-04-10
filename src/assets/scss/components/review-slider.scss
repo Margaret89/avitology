@@ -26,7 +26,6 @@
 
 .review-slider{
 	display: none;
-	padding: 0 80px;
 
 	&.slick-initialized{display: block;}
 
@@ -40,9 +39,29 @@
 		transition: all 0.2s ease 0s;
 	}
 
-	.slick-slide:not(.slick-current){
-		opacity: 0.4;
-		transform: scale(0.8);
-		
+	&__item{
+		img{margin: 0 auto;}
+	}
+}
+
+@media (min-width: 768px) {
+	.review-slider{
+		padding: 0 80px;
+	
+		.slick-slide:not(.slick-current){
+			opacity: 0.4;
+			transform: scale(0.8);
+		}
+	}
+}
+
+@media (max-width: 767px) {
+	.review-slider-wrap{
+		margin: 98px 0 70px;
+
+		&::before{
+			top: -40px;
+			left: 73%;
+		}
 	}
 }

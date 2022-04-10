@@ -33,3 +33,48 @@
 		&__text{font-size: 3.2rem;}
 	}
 }
+
+@media (max-width: 991px) {
+	.footer{
+		&__logo{max-width: 240px;}
+		.contact-phone{
+			&__text{font-size: 2rem;}
+			&__icon{margin-right: 14px;}
+			&__icon .icon{
+				max-width: 20px;
+				max-height: 20px;
+			}
+		}
+	}
+}
+
+@media (max-width: 767px) {
+	.footer{
+		&__content{
+			flex-direction: column-reverse;
+		}
+
+		&__callback{
+			display: inline-block;
+			@include font(none, 500, 1.6rem, none, $color-blue);
+			text-decoration: underline;
+			text-decoration-color: $color-light-blue;
+			margin-top: 6px;
+			cursor: pointer;
+			transition: all 0.2s ease 0s;
+		}
+	
+		&__callback:hover{
+			color: $color-purple;
+			text-decoration-color: $color-purple;
+		}
+
+		&__copyright{margin: 32px 0 0;}
+
+		.contact-phone{
+			margin: 0;
+			&__icon{display: none;}
+			&__text{font-size: 2.2rem;}
+		}
+	}
+}

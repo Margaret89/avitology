@@ -58,3 +58,12 @@
 		color: #888;
 	}
 }
+
+@media (max-width: 991px) {
+	.run-line{
+		&::before{
+			width: 484px;
+			height: 484px;
+		}
+	}
+}
