@@ -2,11 +2,11 @@ html,
 body{
 	background: #fff;
 	font-family: $font-site;
-	@include font(normal, normal, 10px, 1.375, $color-text);
+	@include font(normal, normal, 10px, 1.7, $color-text);
 	box-sizing:border-box;
 }
 
-body{font-size: 1.8rem;}
+body{font-size: 1.6rem;}
 
 body.no-scroll{
 	width: 100vw;
@@ -38,7 +38,7 @@ a:hover{
 
 p{
 	padding: 0;
-	margin-bottom: 1.6rem;
+	margin-bottom: 2.1rem;
 }
  
 h1,.h1,
@@ -65,7 +65,7 @@ h1,.h1{
 }
 
 h2,.h2{
-	font-size: 4.6rem;
+	font-size: 4.3rem;
 	margin-bottom: 2.5rem;
 }
 
@@ -101,7 +101,7 @@ h6,.h6{
 
 main{
 	flex: 1 1 auto;
-	padding-bottom: 100px;
+	padding-bottom: 118px;
 	width: 100%;
 }
 

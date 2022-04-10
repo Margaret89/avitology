@@ -10,6 +10,8 @@
 		@include reset-list;
 	}
 
+	&{margin-top: 45px;}
+
 	button{
 		display: inline-block;
 		width: 10px;
@@ -19,7 +21,6 @@
 		font-size: 0;
 		padding: 0;
 		margin: 0;
-		background: transparent;
 		box-shadow: none;
 		border: none;
 		outline: none;
@@ -31,7 +32,7 @@
 
 	button:hover,
 	.slick-active button{
-		border-color: $color-blue;
+		background: $color-blue;
 	}
 }
 
@@ -93,6 +94,11 @@
 .btn-arr-wrap{
 	display: inline-flex;
 	align-items: center;
-	.btn-arr{position: static;}
+
+	.btn-arr{
+		position: relative;
+		transform: none;
+	}
+
 	.btn-arr:not(:last-child){margin-right: 16px;}
 }

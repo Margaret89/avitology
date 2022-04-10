@@ -111,19 +111,20 @@ block content
 						.advant-item__text <b>Имеем хорошие отношения</b> с менеджментом авито
 
 	section.run-line
-		.run-line__item
-			span.run-line__label Авитолог<span>и</span>я — 
-			span.run-line__val Увеличим ваши продажи
-		.run-line__item
-			span.run-line__label Авитолог<span>и</span>я — 
-			span.run-line__val Увеличим ваши продажи
-		.run-line__item
-			span.run-line__label Авитолог<span>и</span>я — 
-			span.run-line__val Увеличим ваши продажи
-		.run-line__item
-			span.run-line__label Авитолог<span>и</span>я — 
-			span.run-line__val Увеличим ваши продажи
-
+		.run-line__content
+			.run-line__item
+				span.run-line__label Авитолог<span class="text-blue">и</span>я — 
+				span.run-line__val Увеличим ваши продажи
+			.run-line__item
+				span.run-line__label Авитолог<span class="text-blue">и</span>я — 
+				span.run-line__val Увеличим ваши продажи
+			.run-line__item
+				span.run-line__label Авитолог<span class="text-blue">и</span>я — 
+				span.run-line__val Увеличим ваши продажи
+			.run-line__item
+				span.run-line__label Авитолог<span class="text-blue">и</span>я — 
+				span.run-line__val Увеличим ваши продажи
+		
 	section.steps-wrap
 		.container
 			.row
@@ -178,7 +179,7 @@ block content
 										.form-site__field
 											input(type="text", class="js-phone", required="required", placeholder="Номер телефона")
 
-								.form-site__btn
+								.form-site__btn.form-site__btn_half
 									button(type="submit").btn.js-btn-submit Оставить заявку
 
 	section.review-slider-wrap
@@ -257,7 +258,7 @@ block content
 						each item in list
 							.col-4
 								.tariff-item(class=item.color?'tariff-item_'+item.color:'')
-									.tariff-item__title
+									.tariff-item__title= item.title
 
 									.tariff-item__content
 										each text in item.text
@@ -323,7 +324,8 @@ block content
 					img(src="assets/img/graph.png", alt="")
 
 				.col-6
-					h2 Как зарегистрировать компанию на Авито
+					.about__content
+						h2 Как зарегистрировать компанию на Авито
 
-					p На Авито есть два типа профиля: частное лицо и компания. Первый подходит тем, кто иногда продаёт личные вещи и получает деньги наличными или на карту. Второй — продавцам, которые регулярно предлагают товары и услуги, хотят оплачивать услуги Авито с расчётного счёта и получать закрывающие документы.
-					p Если у вас уже есть профиль частного лица. Можно использовать его и просто изменить тип профиля на компанию. Но, если вы размещаете в аккаунте личные объявления, для бизнеса лучше создать новый — чтобы клиенты компании не увидели личных объявлений.
+						p На Авито есть два типа профиля: частное лицо и компания. Первый подходит тем, кто иногда продаёт личные вещи и получает деньги наличными или на карту. Второй — продавцам, которые регулярно предлагают товары и услуги, хотят оплачивать услуги Авито с расчётного счёта и получать закрывающие документы.
+						p Если у вас уже есть профиль частного лица. Можно использовать его и просто изменить тип профиля на компанию. Но, если вы размещаете в аккаунте личные объявления, для бизнеса лучше создать новый — чтобы клиенты компании не увидели личных объявлений.

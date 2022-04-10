@@ -1,2 +1,19 @@
 /*-------------- about -----------------*/
-.about{}
+.about{
+	position: relative;
+	&__content{position: relative;}
+
+	&__content::before{
+		content: '';
+		display: inline-block;
+		width: 26px;
+		height: 26px;
+		border-radius: 50%;
+		background: $color-green;
+		position: absolute;
+		top: -48px;
+		right: -14px;
+	}
+
+	h2, .h2{margin-bottom: 6.5rem;}
+}

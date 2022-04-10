@@ -1,5 +1,9 @@
 /*-------------- steps -----------------*/
-.steps-wrap{margin: 100px 0;}
+.steps-wrap{
+	margin: 133px 0 80px;
+
+	.h2, h2{margin-bottom: 6.5rem;}
+}
 
 .step-item{
 	margin-bottom: 60px;
@@ -34,6 +38,7 @@
 	}
 
 	&__text{
+		max-width: 280px;
 		font-size: 1.6rem;
 		line-height: 1.6;
 	}

@@ -1,10 +1,11 @@
 /*-------------- cases -----------------*/
 .cases-wrap{
-	margin: 100px 0;
+	margin: 110px 0;
 
 	h2, .h2{
 		position: relative;
 		margin-right: 30px;
+		margin-bottom: 0;
 	}
 
 	h2::after,
@@ -24,11 +25,13 @@
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
+		margin-bottom: 60px;
 	}
 }
 
 .cases-slider{
 	display: none;
+	
 
 	&.slick-initialized{display: block;}
 	// .slick-track{display: flex;}
@@ -45,27 +48,32 @@
 	// }
 
 	.slick-list{
-		margin-left: -15px;
-		margin-right: -15px;
+		padding: 0 calc(50% - 585px);
 	}
 
 	.slick-slide{
 		height: auto;
 		margin: 0 15px;
+		transition: opacity 0.2s ease 0s;
 	}
 
 	.slick-slide > div{height: 100%;}
-	.slick-slide[aria-hidden="true"]{opacity: 0.3;}
+	// .slick-slide[aria-hidden="true"]{opacity: 0.3;}
+	.slick-slide:not(.slick-active){opacity: 0.3;}
 
 	&__img{
-		border-radius: 16px;
-		overflow: hidden;
+		img{
+			display: block;
+			border-radius: 16px;
+			margin: 0 auto;
+		}
 	}
 
 	&__text{
+		max-width: 380px;
 		font-size: 1.6rem;
 		line-height: 1.6;
 		text-align: center;
-		margin-top: 22px;
+		margin: 22px auto 0;
 	}
 }

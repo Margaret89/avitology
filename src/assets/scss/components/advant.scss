@@ -1,12 +1,26 @@
 /*-------------- advant -----------------*/
 .advant-wrap{
-	margin: 100px 0;
+	margin: 35px 0;
+
+	h2, .h2{max-width: 500px;}
 }
 
 .advant-item{
-	margin-bottom: 77px;
+	margin-bottom: 42px;
+	text-align: center;
 
-	&__img{margin-bottom: 26px;}
+	&__img{
+		display: flex;
+		align-items: flex-end;
+		margin-bottom: 30px;
+		height: 216px;
+
+		img{
+			display: block;
+			max-height: 100%;
+			margin: 0 auto;
+		}
+	}
 
 	&__text{
 		font-size: 1.6rem;
