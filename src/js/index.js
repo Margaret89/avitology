@@ -88,7 +88,7 @@ function errorField(form, event) {
 		}
 	}
 
-	form.find('input,textarea,select').filter('[required]').each(function(){
+	form.find('input,textarea,select').filter('[aria-required]').each(function(){
 		if($(this).val().length < 1){
 			$(this).closest('.js-form-site-item').addClass('error');
 
@@ -141,9 +141,10 @@ if($('.js-valid-form').length){
 			Fancybox.close();
 			Fancybox.show([{ src: "#msg-success", type: "inline" }]);
 		}
-		$(this)[0].reset();
 
-		e.preventDefault();
+		// $(this)[0].reset();
+
+		// e.preventDefault();
 	});
 }
 
